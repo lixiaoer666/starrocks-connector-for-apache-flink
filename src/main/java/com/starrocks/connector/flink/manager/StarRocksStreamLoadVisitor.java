@@ -26,7 +26,7 @@ import com.starrocks.connector.flink.row.sink.StarRocksDelimiterParser;
 import com.starrocks.connector.flink.row.sink.StarRocksSinkOP;
 import com.starrocks.connector.flink.table.sink.StarRocksSinkOptions;
 
-import java.util.*;
+import java.util.HashMap;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpEntity;
@@ -43,6 +43,11 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 

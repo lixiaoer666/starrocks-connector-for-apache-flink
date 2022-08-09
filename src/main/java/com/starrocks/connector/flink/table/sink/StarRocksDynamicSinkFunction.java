@@ -76,6 +76,11 @@ public class StarRocksDynamicSinkFunction<T> extends RichSinkFunction<T> impleme
         this.sinkManager = new StarRocksSinkManager(sinkOptions, null);
         this.sinkOptions = sinkOptions;
     }
+
+    public StarRocksDynamicSinkFunction(StarRocksSinkOptions sinkOptions, TableSchema schema) {
+        this.sinkManager = new StarRocksSinkManager(sinkOptions, schema);
+        this.sinkOptions = sinkOptions;
+    }
  
     @Override
     public void open(Configuration parameters) throws Exception {

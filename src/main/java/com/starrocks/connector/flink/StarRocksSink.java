@@ -48,6 +48,14 @@ public class StarRocksSink {
         );
     }
 
+    public static <T> SinkFunction<T> sink(
+            TableSchema flinkTableSchema,
+            StarRocksSinkOptions sinkOptions) {
+        return new StarRocksDynamicSinkFunction<>(
+                sinkOptions,
+                flinkTableSchema
+        );
+    }
     /**
      * Create a StarRocks DataStream sink, stream elements could only be String.
      * <p>
